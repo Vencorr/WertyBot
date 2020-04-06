@@ -1,4 +1,5 @@
 server: wertycraft.com
 port: 25565
-token: NOPE_NOT_GONNA_GET_IT
-timeout: 30000
+token: NOPE
+timeout: 7500
+custom: false

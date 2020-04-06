@@ -6,7 +6,6 @@ import net.dv8tion.jda.api.utils.Compression;
 import org.simpleyaml.configuration.file.YamlFile;
 
 import javax.security.auth.login.LoginException;
-import java.io.File;
 
 public class WertyBot {
 
@@ -27,7 +26,7 @@ public class WertyBot {
         JDABuilder builder = new JDABuilder(token());
         builder.setBulkDeleteSplittingEnabled(false);
         builder.setCompression(Compression.ZLIB);
-        builder.setActivity(Activity.watching("Server Status"));
+        builder.setActivity(Activity.watching(config.getString("server")));
 
         builder.addEventListeners(new WertyListener());
 
